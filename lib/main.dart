@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './screens/foods/index.dart';
+import './screens/restaurant/index.dart';
 import './screens/auth/register.dart';
 import './screens/auth/login.dart';
 
@@ -25,7 +27,9 @@ class FlutterFood extends StatelessWidget {
         initialRoute: '/login',
         routes: <String, WidgetBuilder>{
           '/login': (context) => LoginPage(),
-          '/register': (context) => RegisterPage()
+          '/register': (context) => RegisterPage(),
+          '/restaurants': (context) => RestaurantPage(),
+          '/foods': (context) => FoodPage(),
         });
   }
 }
