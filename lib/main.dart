@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/auth/register.dart';
 import './screens/auth/login.dart';
 
 void main() => runApp(const FlutterFood());
@@ -21,6 +22,10 @@ class FlutterFood extends StatelessWidget {
             brightness: Brightness.dark,
           ),
         ),
-        home: LoginPage());
+        initialRoute: '/login',
+        routes: <String, WidgetBuilder>{
+          '/login': (context) => LoginPage(),
+          '/register': (context) => RegisterPage()
+        });
   }
 }

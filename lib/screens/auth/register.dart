@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import './widgets/header_widget.dart';
-import './register.dart';
+import './login.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
-
+class RegisterPage extends StatelessWidget {
   double _deviceWidth = 0;
   double _deviceHeight = 0;
 
@@ -24,15 +22,15 @@ class LoginPage extends StatelessWidget {
         Container(
           height: 30,
         ),
-        const HeaderWidget(),
+        HeaderWidget(),
         Container(
           height: 20,
         ),
-        _formLogin(context),
+        _formRegister(context),
         Container(
           height: 15,
         ),
-        _loginButton(context),
+        _registerButton(context),
         Container(
           height: 30,
         ),
@@ -41,7 +39,7 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Widget _formLogin(context) {
+  Widget _formRegister(context) {
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
@@ -54,7 +52,34 @@ class LoginPage extends StatelessWidget {
                 offset: Offset(0, 10))
           ]),
       child: Column(
-        children: [_emailTextField(context), _passwordTextField(context)],
+        children: [
+          _nameTextField(context),
+          _emailTextField(context),
+          _passwordTextField(context)
+        ],
+      ),
+    );
+  }
+
+  Widget _nameTextField(context) {
+    return TextFormField(
+      autocorrect: false,
+      autofocus: true,
+      style: TextStyle(color: Theme.of(context).primaryColor),
+      cursorColor: Theme.of(context).primaryColor,
+      decoration: InputDecoration(
+        contentPadding: const EdgeInsets.all(10),
+        labelStyle: TextStyle(color: Theme.of(context).primaryColor),
+        labelText: 'Nome',
+        border: UnderlineInputBorder(
+            borderSide:
+                BorderSide(color: Theme.of(context).colorScheme.primary)),
+        enabledBorder: UnderlineInputBorder(
+            borderSide:
+                BorderSide(color: Theme.of(context).colorScheme.primary)),
+        focusedBorder: UnderlineInputBorder(
+            borderSide:
+                BorderSide(color: Theme.of(context).colorScheme.primary)),
       ),
     );
   }
@@ -62,7 +87,6 @@ class LoginPage extends StatelessWidget {
   Widget _emailTextField(context) {
     return TextFormField(
       autocorrect: false,
-      autofocus: true,
       style: TextStyle(color: Theme.of(context).primaryColor),
       cursorColor: Theme.of(context).primaryColor,
       decoration: InputDecoration(
@@ -99,16 +123,16 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Widget _loginButton(context) {
+  Widget _registerButton(context) {
     return Container(
       width: _deviceWidth,
       child: MaterialButton(
         onPressed: () {
-          print("Texto login1");
+          print("register...");
         },
         color: Theme.of(context).primaryColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        child: Text("Login"),
+        child: Text("Cadastrar"),
       ),
     );
   }
@@ -116,10 +140,10 @@ class LoginPage extends StatelessWidget {
   Widget _textRegister(context) {
     return GestureDetector(
       onTap: () {
-        // Navigator.of(context).push(MaterialPageRoute(builder: (context) => RegisterPage()));
-        Navigator.pushNamed(context, '/register');
+        // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginPage()));
+        Navigator.pushReplacementNamed(context, '/login');
       },
-      child: Text("Cadastrar-se",
+      child: Text("Já cadastrou? Faça login",
           style:
               TextStyle(color: Theme.of(context).primaryColor, fontSize: 18.2)),
     );
