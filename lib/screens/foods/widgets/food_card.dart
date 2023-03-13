@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './food_image.dart';
+import './../../shared/widgets/image.dart';
 
 class FoodCard extends StatelessWidget {
   String id;
@@ -35,7 +35,7 @@ class FoodCard extends StatelessWidget {
                   width: 80,
                   height: 80,
                   child: ClipOval(
-                    child: FoodImageWidget(
+                    child: ImageWidget(
                         image: 'http://via.placeholder.com/350x200'),
                   ),
                 ),
