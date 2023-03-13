@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-class RestaurantImageWidget extends StatelessWidget {
+class ImageWidget extends StatelessWidget {
   final String? image;
 
-  const RestaurantImageWidget({required this.image, super.key});
+  const ImageWidget({required, required this.image, super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -10,7 +10,7 @@ class FoodWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height - 190,
+      height: MediaQuery.of(context).size.height - 180,
       width: MediaQuery.of(context).size.width,
       child: ListView.builder(
           itemBuilder: (context, index) {

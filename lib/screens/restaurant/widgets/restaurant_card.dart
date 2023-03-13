@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './restaurant_image.dart';
+import './../../shared/widgets/image.dart';
 
 class RestaurantCard extends StatelessWidget {
   final String id;
@@ -38,7 +38,7 @@ class RestaurantCard extends StatelessWidget {
                     width: 80,
                     height: 80,
                     child: ClipOval(
-                      child: RestaurantImageWidget(
+                      child: ImageWidget(
                           image: 'http://via.placeholder.com/350x200'),
                     ),
                   ),

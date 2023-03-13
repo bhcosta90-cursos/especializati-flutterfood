@@ -8,7 +8,6 @@ class BottomNavigator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(itemActive);
     return CurvedNavigationBar(
       color: Theme.of(context).colorScheme.primary,
       backgroundColor: Theme.of(context).colorScheme.background,
@@ -21,7 +20,14 @@ class BottomNavigator extends StatelessWidget {
         Icon(Icons.supervised_user_circle),
       ],
       onTap: (index) {
-        print(index);
+        switch (index) {
+          case 2:
+            Navigator.pushReplacementNamed(context, '/cart');
+            break;
+          default:
+            Navigator.pushReplacementNamed(context, '/restaurants');
+            break;
+        }
       },
     );
   }
