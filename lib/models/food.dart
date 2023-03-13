@@ -3,9 +3,9 @@ import 'dart:convert';
 class Food {
   String id;
   String title;
-  String image;
+  String? image;
   String description;
-  String price;
+  double price;
 
   Food(
       {required this.id,

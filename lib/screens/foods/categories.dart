@@ -26,12 +26,15 @@ class CategoryWidget extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(20, 2, 20, 2),
       margin: const EdgeInsets.all(5),
       decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey),
+          border: Border.all(
+              color: category.name == 'Doces' ? Colors.black : Colors.grey),
           borderRadius: BorderRadius.circular(100)),
       child: Center(
           child: Text(
         category.name,
-        style: const TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
+        style: TextStyle(
+            color: category.name == 'Doces' ? Colors.black : Colors.grey,
+            fontWeight: FontWeight.bold),
       )),
     );
   }
