@@ -24,6 +24,9 @@ class BottomNavigator extends StatelessWidget {
           case 2:
             Navigator.pushReplacementNamed(context, '/cart');
             break;
+          case 1:
+            Navigator.pushReplacementNamed(context, '/order');
+            break;
           default:
             Navigator.pushReplacementNamed(context, '/restaurants');
             break;

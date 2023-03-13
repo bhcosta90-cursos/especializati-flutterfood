@@ -10,8 +10,8 @@ class Order {
   String status;
   double total;
   String comment;
-  List<Food> foods;
-  List<Evaluation> evaluations;
+  List<Food> foods = [];
+  List<Evaluation> evaluations = [];
 
   Order(
       {required this.id,

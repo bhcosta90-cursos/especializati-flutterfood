@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/order/index.dart';
 import './screens/foods/index.dart';
 import './screens/restaurant/index.dart';
 import './screens/cart/index.dart';
@@ -20,7 +21,7 @@ class FlutterFood extends StatelessWidget {
         theme: theme.copyWith(
             colorScheme: theme.colorScheme.copyWith(
               background: Colors.white,
-              primary: Color.fromRGBO(147, 70, 248, 1),
+              primary: const Color.fromRGBO(147, 70, 248, 1),
               secondary: Colors.green,
               brightness: Brightness.dark,
             ),
@@ -32,6 +33,7 @@ class FlutterFood extends StatelessWidget {
           '/restaurants': (context) => RestaurantPage(),
           '/foods': (context) => FoodPage(),
           '/cart': (context) => CartPage(),
+          '/order': (context) => OrderPage(),
         });
   }
 }
