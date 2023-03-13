@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './widgets/restaurant_card.dart';
+import './../shared/widgets/bottom_navigator.dart';
 import './../../models/restaurant.dart';
 
 class RestaurantPage extends StatefulWidget {
@@ -32,6 +33,7 @@ class _RestaurantPageState extends State<RestaurantPage> {
           backgroundColor: Theme.of(context).colorScheme.primary,
         ),
         backgroundColor: Theme.of(context).colorScheme.background,
+        bottomNavigationBar: BottomNavigator(0),
         body: _buildRestaurants(context));
   }
 

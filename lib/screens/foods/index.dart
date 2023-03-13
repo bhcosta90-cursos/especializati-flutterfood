@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import './../../models/category.dart';
 import './../../models/food.dart';
-
+import './../shared/widgets/bottom_navigator.dart';
 import './categories.dart';
 import './foods.dart';
 
@@ -70,6 +70,7 @@ class _FoodPageState extends State<FoodPage> {
           backgroundColor: Theme.of(context).colorScheme.primary,
         ),
         backgroundColor: Theme.of(context).colorScheme.background,
+        bottomNavigationBar: BottomNavigator(0),
         body: _buildPage(context));
   }
 

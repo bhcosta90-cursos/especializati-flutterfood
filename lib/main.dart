@@ -17,13 +17,13 @@ class FlutterFood extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Food',
         theme: theme.copyWith(
-          colorScheme: theme.colorScheme.copyWith(
-            background: Colors.white,
-            primary: Color.fromRGBO(147, 70, 248, 1),
-            secondary: Colors.black,
-            brightness: Brightness.dark,
-          ),
-        ),
+            colorScheme: theme.colorScheme.copyWith(
+              background: Colors.white,
+              primary: Color.fromRGBO(147, 70, 248, 1),
+              secondary: Colors.black,
+              brightness: Brightness.dark,
+            ),
+            iconTheme: const IconThemeData(color: Colors.white)),
         initialRoute: '/login',
         routes: <String, WidgetBuilder>{
           '/login': (context) => LoginPage(),
